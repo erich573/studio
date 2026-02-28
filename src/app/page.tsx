@@ -76,7 +76,7 @@ export default function PixelTasksPage() {
       <div className="text-center space-y-4">
         <div className="flex justify-center items-center gap-4 animate-float">
           <PixelHeartIcon className="w-10 h-10 text-primary" />
-          <h1 className="text-5xl md:text-7xl font-headline font-black pixel-text-shadow tracking-tighter uppercase italic text-primary-foreground">
+          <h1 className="text-4xl md:text-5xl font-pixel font-black pixel-text-shadow tracking-tighter uppercase italic text-primary-foreground">
             Pink<span className="text-primary">Tasks</span>
           </h1>
           <PixelHeartIcon className="w-10 h-10 text-primary" />
@@ -116,8 +116,8 @@ export default function PixelTasksPage() {
             placeholder="Type a new sweet mission..."
             className="flex-1 h-14 pixel-border-sm text-lg font-medium focus-visible:ring-0 border-primary rounded-none placeholder:text-primary/40"
           />
-          <PixelButton type="submit" size="lg" className="h-14">
-            <PixelPlusIcon className="w-6 h-6 mr-2" />
+          <PixelButton type="submit" size="lg" className="h-14 min-w-[120px]">
+            <PixelPlusIcon className="w-6 h-6" />
             Add
           </PixelButton>
         </form>

@@ -25,7 +25,7 @@ export const PixelButton = React.forwardRef<HTMLButtonElement, PixelButtonProps>
       <button
         ref={ref}
         className={cn(
-          'pixel-border-sm pixel-button font-bold uppercase tracking-wider transition-all duration-75',
+          'pixel-border-sm pixel-button font-bold uppercase tracking-wider transition-all duration-75 flex items-center justify-center gap-2',
           variants[variant],
           sizes[size],
           className
