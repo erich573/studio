@@ -114,7 +114,7 @@ export default function PixelTasksPage() {
             value={newTaskText}
             onChange={(e) => setNewTaskText(e.target.value)}
             placeholder="Type a new sweet mission..."
-            className="flex-1 h-14 pixel-border-sm text-lg font-medium focus-visible:ring-0 border-primary rounded-none placeholder:text-primary-foreground/60"
+            className="flex-1 h-14 pixel-border-sm text-lg font-medium focus-visible:ring-0 border-primary rounded-none placeholder:text-primary-foreground/80"
           />
           <PixelButton type="submit" size="lg" className="h-14 min-w-[120px] justify-center">
             <PixelPlusIcon className="w-6 h-6" />
@@ -125,11 +125,11 @@ export default function PixelTasksPage() {
 
       {/* Task List */}
       <div className="space-y-6">
-        <div className="flex justify-between items-center px-2">
-          <h2 className="text-2xl font-black uppercase tracking-tight italic text-primary-foreground">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 px-2">
+          <h2 className="text-lg md:text-xl font-pixel font-black uppercase tracking-tight italic text-primary-foreground">
             Current Missions
           </h2>
-          <div className="flex gap-4 text-xs font-bold uppercase">
+          <div className="flex gap-4 text-[10px] md:text-xs font-bold uppercase">
             <span className="bg-primary/30 px-3 py-2 pixel-border-sm flex items-center gap-2">
               <PixelCheckIcon className="w-4 h-4" /> Done: {completedCount}
             </span>
