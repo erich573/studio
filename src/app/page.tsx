@@ -114,9 +114,9 @@ export default function PixelTasksPage() {
             value={newTaskText}
             onChange={(e) => setNewTaskText(e.target.value)}
             placeholder="Type a new sweet mission..."
-            className="flex-1 h-14 pixel-border-sm text-lg font-medium focus-visible:ring-0 border-primary rounded-none placeholder:text-primary/40"
+            className="flex-1 h-14 pixel-border-sm text-lg font-medium focus-visible:ring-0 border-primary rounded-none placeholder:text-primary-foreground/60"
           />
-          <PixelButton type="submit" size="lg" className="h-14 min-w-[120px]">
+          <PixelButton type="submit" size="lg" className="h-14 min-w-[120px] justify-center">
             <PixelPlusIcon className="w-6 h-6" />
             Add
           </PixelButton>
