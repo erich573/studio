@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['Space Grotesk', 'sans-serif'],
+        headline: ['Space Grotesk', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -71,6 +71,11 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      boxShadow: {
+        pixel: '4px 4px 0px 0px rgba(0, 0, 0, 1)',
+        'pixel-sm': '2px 2px 0px 0px rgba(0, 0, 0, 1)',
+        'pixel-hover': '6px 6px 0px 0px rgba(0, 0, 0, 1)',
+      },
       keyframes: {
         'accordion-down': {
           from: {
@@ -88,10 +93,16 @@ export default {
             height: '0',
           },
         },
+        'pixel-pop': {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+          '100%': { transform: 'scale(1)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pixel-pop': 'pixel-pop 0.1s steps(2)',
       },
     },
   },
