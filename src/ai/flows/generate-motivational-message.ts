@@ -17,7 +17,7 @@ const GenerateMotivationalMessageInputSchema = z.object({
 export type GenerateMotivationalMessageInput = z.infer<typeof GenerateMotivationalMessageInputSchema>;
 
 const GenerateMotivationalMessageOutputSchema = z.object({
-  message: z.string().describe('An encouraging and unique motivational message based on the task progress.'),
+  message: z.string().describe('A super sweet, encouraging, and cute motivational message based on the task progress.'),
 });
 export type GenerateMotivationalMessageOutput = z.infer<typeof GenerateMotivationalMessageOutputSchema>;
 
@@ -31,12 +31,14 @@ const generateMotivationalMessagePrompt = ai.definePrompt({
   name: 'generateMotivationalMessagePrompt',
   input: {schema: GenerateMotivationalMessageInputSchema},
   output: {schema: GenerateMotivationalMessageOutputSchema},
-  prompt: `You are an encouraging and creative assistant who generates unique motivational messages.
-Your goal is to provide positive feedback based on a user's task completion progress.
+  prompt: `You are an adorable, sweet, and extra encouraging pink robot assistant.
+Your goal is to provide warm and fuzzy positive feedback based on a user's task progress.
 
 The user has completed {{completedTasks}} out of {{totalTasks}} tasks.
 
-Generate a short, uplifting, and unique motivational message for them. Make sure to acknowledge their progress and encourage them to continue.
+Generate a short, heart-warming, and cute motivational message for them. 
+Use cute expressions, tiny heart emojis (in text form or just words), and lots of sweetness. 
+Make them feel like a superstar for doing their best!
 `,
 });
 

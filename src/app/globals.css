@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 88%; /* #E0E0E0 Pastel Gray */
-    --foreground: 0 0% 10%;
+    --background: 330 100% 98%; /* Lightest Pink - Cute background */
+    --foreground: 330 40% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 330 40% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-    --primary: 206 100% 83%; /* #A7D9FF Pastel Blue */
-    --primary-foreground: 206 40% 20%;
-    --secondary: 28 100% 86%; /* #FFDAB9 Pastel Peach */
-    --secondary-foreground: 28 40% 20%;
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
-    --accent: 28 100% 86%;
-    --accent-foreground: 28 40% 20%;
+    --popover-foreground: 330 40% 15%;
+    --primary: 330 90% 85%; /* Soft Bubblegum Pink */
+    --primary-foreground: 330 40% 20%;
+    --secondary: 330 100% 92%; /* Lighter Pastel Pink */
+    --secondary-foreground: 330 40% 25%;
+    --muted: 330 20% 95%;
+    --muted-foreground: 330 20% 40%;
+    --accent: 330 100% 92%;
+    --accent-foreground: 330 40% 25%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 0%; /* Black borders for pixel art */
+    --border: 330 30% 20%; /* Deep dark pink for "pixel" borders */
     --input: 0 0% 100%;
-    --ring: 206 100% 83%;
-    --radius: 0px; /* Force sharp corners for pixel art */
+    --ring: 330 90% 85%;
+    --radius: 0px; 
   }
 }
 
@@ -38,20 +38,30 @@
 }
 
 .pixel-border {
-  border: 4px solid black;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  border: 4px solid hsl(var(--border));
+  box-shadow: 4px 4px 0px 0px hsla(var(--border), 0.3);
 }
 
 .pixel-border-sm {
-  border: 2px solid black;
-  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  border: 2px solid hsl(var(--border));
+  box-shadow: 2px 2px 0px 0px hsla(var(--border), 0.3);
 }
 
 .pixel-button:active {
   transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 0px 0px hsla(var(--border), 0.3);
 }
 
 .pixel-text-shadow {
-  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
